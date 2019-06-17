@@ -23,6 +23,16 @@ class GetInputs:
         except Exception as ex:
             print("Error while processing file {}".format(ex))
 
+    def process_cmd(self):
+        try:
+            while True:
+                stdin_input = input("Enter command: ")
+                self.execute_operation(stdin_input)
+        except (KeyboardInterrupt, SystemExit):
+            return
+        except Exception as ex:
+            print("Error while processing file {}".format(ex))
+
     def execute_operation(self, cmd):
         input_line = cmd.split()
 
@@ -40,8 +50,8 @@ if __name__ == "__main__":
     args = sys.argv
     if len(args) == 1:
         pass
-        # get_inputs = GetInputs()
-        # get_inputs.process_input()
+        get_inputs = GetInputs()
+        get_inputs.process_cmd()
     elif len(args) == 2:
         get_inputs = GetInputs()
         get_inputs.read_input_file(args[1])
