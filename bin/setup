@@ -1,0 +1,12 @@
+# Add script to:
+# * Install dependencies
+# * Build/Compile
+# * Run Test Suit to validate
+#
+# After this is run, bin/parking_lot
+# should Just Work.
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+cd "$DIR/.."
+export PYTHONPATH="$DIR/../"
+python3 -m unittest $DIR/../tests/test_parking_lot.py
+exit 0
