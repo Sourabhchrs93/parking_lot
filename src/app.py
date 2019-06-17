@@ -12,13 +12,12 @@ class GetInputs:
 
         file_obj = open(file, 'r')
         try:
-            while True:
-                line = file_obj.readline()
+            line = file_obj.readline()
+            while line:
                 if line.endswith('\n'):
                     line = line[:-1]
-                if line == '':
-                    continue
                 self.execute_operation(line)
+                line = file_obj.readline()
         except StopIteration:
             file_obj.close()
         except Exception as ex:

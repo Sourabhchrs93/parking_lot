@@ -19,3 +19,4 @@ python3 $DIR/../src/app.py $1
 #   ruby $DIR/../main.rb $1
 # 
 # Important: Above commands is just examples, please modify to suit your requirement as necessary
+exit 0
