@@ -27,6 +27,8 @@ class GetInputs:
         try:
             while True:
                 stdin_input = input("Enter command: ")
+                if stdin_input == 'exit':
+                    return 
                 self.execute_operation(stdin_input)
         except (KeyboardInterrupt, SystemExit):
             return
