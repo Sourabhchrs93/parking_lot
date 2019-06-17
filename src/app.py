@@ -1,5 +1,6 @@
-import os, sys
-from parking_lot import ParkingLot
+import os
+import sys
+from src.parking_lot import ParkingLot
 
 
 class GetInputs:
