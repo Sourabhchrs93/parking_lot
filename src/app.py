@@ -39,7 +39,6 @@ class GetInputs:
 
 if __name__ == "__main__":
     args = sys.argv
-    print(args)
     if len(args) == 1:
         pass
         # get_inputs = GetInputs()
@@ -52,38 +51,3 @@ if __name__ == "__main__":
               "Usage:\n"
               "./parking_lot.py <filename> OR \n"
               "./parking_lot.py")
-
-'''
-from parking_lot import ParkingLot
-
-
-parking = ParkingLot()
-
-parking.create_parking_lot(4)
-
-parking.park('KA-01-HH-1', 'White')
-parking.park('KA-01-HH-2', 'White')
-parking.park('KA-01-HH-3', 'White')
-parking.park('KA-01-HH-4', 'Red')
-
-parking.create_parking_lot(4)
-
-parking.status()
-parking.leave(3)
-parking.leave(3)
-parking.leave(2)
-
-parking.park('KA-01-HH-22', 'Red')
-parking.park('KA-01-HH-33', 'Red')
-
-parking.status()
-
-parking.leave(1)
-parking.status()
-
-parking.registration_numbers_for_cars_with_colour('Red')
-parking.slot_numbers_for_cars_with_colour('Red')
-
-parking.slot_number_for_registration_number('KA-01-HH-4')
-parking.slot_number_for_registration_number('KA-01-HH-2')
-'''
