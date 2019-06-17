@@ -48,10 +48,11 @@ class ParkingLot:
     def status(self):
         if not self.is_exist():
             return
-        print('Slot No.\tRegistration No\tColour')
+        print('Slot No.    Registration No    Colour')
         for slot in range(1, self.size + 1):
             if slot in self.parking_lot:
-                print(slot, '\t\t', self.parking_lot[slot].get_reg_no(), '\t', self.parking_lot[slot].get_colour())
+                print('{}           {}      {}'.format(slot, self.parking_lot[slot].get_reg_no(),
+                                                       self.parking_lot[slot].get_colour()))
         return
 
     def registration_numbers_for_cars_with_colour(self, colour):
