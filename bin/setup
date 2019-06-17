@@ -7,6 +7,8 @@
 # should Just Work.
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 cd "$DIR/.."
+virtualenv -p python3 env
+#!/usr/bin/env bash
 export PYTHONPATH="$DIR/../"
 python3 -m unittest $DIR/../tests/test_parking_lot.py
 exit 0
