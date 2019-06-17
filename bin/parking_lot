@@ -8,7 +8,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 cd "$DIR/../"
 #!/usr/bin/env bash
-pip install -r requirements.txt
+#pip install -r requirements.txt
 export PYTHONPATH="$DIR/../"
 python3 $DIR/../src/app.py $1
 
